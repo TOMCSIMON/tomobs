@@ -1,10 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+<nav th:fragment="navbar" class="navbar fixed-top"
+     xmlns:th="http://www.w3.org/1999/xhtml">
+    <div class="container">
 
-</body>
-</html>
+        <!-- Brand -->
+        <a class="navbar-brand text-white fw-bold" th:href="@{/}">ToMobs</a>
+
+        <!-- Search Bar -->
+        <form class="d-flex mx-auto" style="width: 60%;">
+            <div class="input-group">
+
+                <input class="form-control" type="search"
+                       placeholder="what are you looking for...">
+
+                <span class="input-group-text bg-white">
+                    <img th:src="@{/icons/search.png}" width="18" alt="search">
+                </span>
+
+            </div>
+        </form>
+
+        <!-- Profile + Cart -->
+        <div class="d-flex align-items-center gap-4">
+
+            <a th:href="@{/}" class="text-white">
+                <img th:src="@{/icons/profile.svg}"
+                     class="white-icon" width="30" alt="profile">
+            </a>
+
+            <a th:href="@{/}" class="text-white">
+                <img th:src="@{/icons/trolley.png}"
+                     class="white-icon" width="30" alt="cart">
+            </a>
+
+        </div>
+
+    </div>
+</nav>
