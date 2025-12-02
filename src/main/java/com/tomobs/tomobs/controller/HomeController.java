@@ -12,4 +12,15 @@ public class HomeController {
         return  "index";
     }
 
+    @GetMapping("/signup")
+    public String signupPage() {
+
+        return  "signup";
+    }
+
+    @GetMapping("/login")
+    public String loginPage() {
+
+        return  "login";
+    }
 }
